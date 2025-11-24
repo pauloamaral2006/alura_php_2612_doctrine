@@ -1,0 +1,150 @@
+<?php //Alura__Doctrine__Entity__Course__CLASSMETADATA__
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Mapping\\FieldMapping'] ?? Registry::p('Doctrine\\ORM\\Mapping\\FieldMapping')),
+        clone $p['Doctrine\\ORM\\Mapping\\FieldMapping'],
+        clone ($p['Doctrine\\ORM\\Mapping\\ManyToManyOwningSideMapping'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ManyToManyOwningSideMapping')),
+        clone ($p['Doctrine\\ORM\\Mapping\\JoinTableMapping'] ?? Registry::p('Doctrine\\ORM\\Mapping\\JoinTableMapping')),
+        clone ($p['Doctrine\\ORM\\Mapping\\JoinColumnMapping'] ?? Registry::p('Doctrine\\ORM\\Mapping\\JoinColumnMapping')),
+        clone $p['Doctrine\\ORM\\Mapping\\JoinColumnMapping'],
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'namespace' => [
+                'Alura\\Doctrine\\Entity',
+            ],
+            'rootEntityName' => [
+                'Alura\\Doctrine\\Entity\\Course',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => $o[1],
+                    'nome' => $o[2],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'nome' => 'nome',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'nome' => 'nome',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'Course',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'students' => $o[3],
+                ],
+            ],
+            'idGenerator' => [
+                $o[7],
+            ],
+            'name' => [
+                'Alura\\Doctrine\\Entity\\Course',
+                4 => 'course_student',
+                'course_id',
+                'student_id',
+            ],
+            'id' => [
+                1 => true,
+            ],
+            'type' => [
+                1 => 'integer',
+                'string',
+            ],
+            'fieldName' => [
+                1 => 'id',
+                'nome',
+            ],
+            'columnName' => [
+                1 => 'id',
+                'nome',
+            ],
+            'fetch' => [
+                3 => 2,
+            ],
+            'isOnDeleteCascade' => [
+                3 => true,
+            ],
+            'sourceEntity' => [
+                3 => 'Alura\\Doctrine\\Entity\\Course',
+            ],
+            'inversedBy' => [
+                3 => 'courses',
+            ],
+            'joinTable' => [
+                3 => $o[4],
+            ],
+            'joinTableColumns' => [
+                3 => [
+                    'course_id',
+                    'student_id',
+                ],
+            ],
+            'relationToSourceKeyColumns' => [
+                3 => [
+                    'course_id' => 'id',
+                ],
+            ],
+            'relationToTargetKeyColumns' => [
+                3 => [
+                    'student_id' => 'id',
+                ],
+            ],
+            'joinColumns' => [
+                4 => [
+                    $o[5],
+                ],
+            ],
+            'inverseJoinColumns' => [
+                4 => [
+                    $o[6],
+                ],
+            ],
+            'onDelete' => [
+                5 => 'CASCADE',
+                'CASCADE',
+            ],
+            'nullable' => [
+                5 => false,
+                false,
+            ],
+            'referencedColumnName' => [
+                5 => 'id',
+                'id',
+            ],
+        ],
+        'Doctrine\\ORM\\Mapping\\AssociationMapping' => [
+            'fieldName' => [
+                3 => 'students',
+            ],
+            'targetEntity' => [
+                3 => 'Alura\\Doctrine\\Entity\\Student',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

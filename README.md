@@ -14,6 +14,14 @@
 - Trabalhar com relacionamentos entre entidades
 - Aprender a gerar banco de dados pela linha de comando
 
+### Doctrine: Migrations, relatórios e performance
+
+- Aprender sobre Migrations
+- Fazer relatórios complexos com DQL
+- Melhorar a performance com Eager Loading
+- Conhecer as estratégias de Cache do Doctrine
+- Ver como usar Doctrine com outras ferramentas
+
 ## 🖥️ Tecnologias
 
 <div>

@@ -13,7 +13,6 @@ $entityManager = EntityManagerCreator::createEntityManager();
 $studentRepository = $entityManager->getRepository(Student::class);
 
 $student = $studentRepository->find($argv[1]);
-//$student = $entityManager->getReference(Student::class, $argv[1]);
-
+//$student = $entityManager->getReference(Student::class, $argv[1])
 $entityManager->remove($student);
 $entityManager->flush();

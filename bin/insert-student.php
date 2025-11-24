@@ -13,7 +13,12 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $entityManager = EntityManagerCreator::createEntityManager();
 
 $student = new Student($argv['1']);
-$student->addPhone(new Phone($argv['2']));
+
+for($i = 2; $i < count($argv); $i++){
+
+    $student->addPhone(new Phone($argv[$i]));
+
+}
 
 $entityManager->persist($student);
 $entityManager->flush();

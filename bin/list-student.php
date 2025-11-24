@@ -12,10 +12,28 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 // replace with mechanism to retrieve EntityManager in your app
 $entityManager = EntityManagerCreator::createEntityManager();
+//$studentRepository = $entityManager->getRepository(Student::class);
+
+/** @var Student[]  $studentList */
+//$studentList = $studentRepository->findAll();
+
+/* $studantClass = Student::class;
+$sql = "SELECT student, phone, course 
+    FROM $studantClass student 
+    LEFT JOIN student.phones phone
+    LEFT JOIN student.courses course"; */
+
+/** @var Student[]  $studentList */
+//$studentList = $entityManager->createQuery($sql)->getResult();
+
+
+/** @var Student[]  $studentList */
+//$studentList = $entityManager->getRepository(Student::class)->findAll();
+
 $studentRepository = $entityManager->getRepository(Student::class);
 
 /** @var Student[]  $studentList */
-$studentList = $studentRepository->findAll();
+$studentList = $studentRepository->studentsAndCourse();
 
 foreach ($studentList as $student) {
     
@@ -51,4 +69,4 @@ foreach ($studentList as $student) {
 
 }
 
-echo $studentRepository->count([]) . PHP_EOL;
+echo count($studentList) . PHP_EOL;
